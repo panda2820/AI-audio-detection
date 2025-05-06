@@ -11,7 +11,7 @@
             --primary-hover: #4338CA;
             --bg-color: #F9FAFB;
             --border-color: #E5E7EB;
-            --text-color: #1F2937;
+            --text-color: #121418;
             --text-secondary: #6B7280;
         }
 
@@ -23,7 +23,8 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--bg-color);
+            background: url('/assets/background.jpg') no-repeat center center fixed;
+            background-size: cover;
             color: var(--text-color);
             line-height: 1.5;
             margin: 0;
@@ -33,10 +34,11 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            background: white;
+            background: rgba(255, 255, 255, 0.247);
             padding: 2rem;
             border-radius: 12px;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            backdrop-filter: blur(10px);
         }
 
         .main-sections {
@@ -53,21 +55,23 @@
         }
 
         .recording-section, .upload-section {
-            background: white;
+            background: rgba(240, 245, 255, 0.9);
             padding: 1.5rem;
-            border: 1px solid var(--border-color);
+            border: 1px solid rgba(147, 197, 253, 0.3);
             border-radius: 8px;
             height: 100%;
             display: flex;
             flex-direction: column;
+            box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.1);
         }
 
         .analyze-section {
-            background: white;
+            background: rgba(240, 245, 255, 0.9);
             padding: 1.5rem;
-            border: 1px solid var(--border-color);
+            border: 1px solid rgba(147, 197, 253, 0.3);
             border-radius: 8px;
             margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.1);
         }
 
         h2 {

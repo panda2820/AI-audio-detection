@@ -1,5 +1,6 @@
 from fastapi import FastAPI, File, UploadFile, HTTPException, Form
 from fastapi.responses import JSONResponse, FileResponse
+from fastapi.staticfiles import StaticFiles
 import tempfile
 import os
 from models import AudioAnalysisResponse
@@ -8,6 +9,9 @@ from services.detection import detect_ai_audio
 from typing import List
 
 app = FastAPI()
+
+# Mount the assets directory
+app.mount("/assets", StaticFiles(directory="assets"), name="assets")
 
 UPLOAD_DIR = os.path.join(os.path.dirname(__file__), "upload")
 os.makedirs(UPLOAD_DIR, exist_ok=True)
